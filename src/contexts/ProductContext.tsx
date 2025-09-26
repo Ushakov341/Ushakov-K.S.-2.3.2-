@@ -55,7 +55,7 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({ children }) =>
 export const useProducts = (): ProductContextType => {
   const context = useContext(ProductContext);
   if (context === undefined) {
-    throw new Error('useProducts must be used within a ProductProvider');
+    throw new Error('useProducts должен использоваться внутри ProductProvider');
   }
   return context;
 };
