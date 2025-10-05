@@ -6,14 +6,33 @@ import { NotificationProvider } from '../../../contexts/NotificationContext';
 import { describe, expect, it } from 'vitest';
 import React from 'react';
 
-const mockProduct = {
+const mockProduct: any = {
   id: 1,
+  sku: 'test-sku',
   title: 'Test Product',
-  price: 10.99,
-  thumbnail: 'test-image.jpg',
   description: 'Test description',
+  availabilityStatus: 'In Stock',
+  category: 'vegetables',
+  price: 10.99,
+  discountPercentage: 0,
+  rating: 4.5,
   stock: 10,
-  weight: 1.5
+  tags: ['fresh'],
+  brand: 'test',
+  weight: 1.5,
+  dimensions: { width: 10, height: 10, depth: 10 },
+  warrantyInformation: '',
+  shippingInformation: '',
+  returnPolicy: '',
+  minimumOrderQuantity: 1,
+  meta: {
+    createdAt: '',
+    updatedAt: '',
+    barcode: '',
+    qrCode: ''
+  },
+  images: [],
+  thumbnail: 'test-image.jpg',
 };
 
 const renderWithProviders = (component: React.ReactNode) => {
