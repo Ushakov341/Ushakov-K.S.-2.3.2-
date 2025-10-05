@@ -1,16 +1,12 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "target": "ES2017",
-    "lib": ["DOM", "ES2017"],
+    "composite": true,
+    "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["vitest/globals", "@testing-library/jest-dom"]
+    "types": ["node"]
   },
-  "include": ["src", "tests"]
+  "include": ["vite.config.ts"]
 }
